@@ -19,7 +19,7 @@ namespace DemoCRUDHibernate.MapByCode
         {
             // TestFindAll();
             // TestFindById("C1000");
-            TestCreate(new Compte {Numero="Z1000", Proprietaire="NOUVEAU", Solde=2000M });
+            TestCreate(new Compte {Numero="C3000", Proprietaire="Amine", Solde=3000M });
             // TestUpdate(new Compte { Numero = "B1000", Proprietaire = "***** NOUVEAU", Solde = 2000M });
             TestFindAll();
             //

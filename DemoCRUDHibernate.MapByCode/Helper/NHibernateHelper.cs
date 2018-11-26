@@ -26,10 +26,11 @@ namespace DemoCRUDHibernate.MapByCode.Helper
                 if (_sessionFactory == null)
                 {
                     var configuration = new Configuration()
-                          .SetProperty(Environment.ConnectionString, @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=BankingDB;Integrated Security=True")
+                          .SetProperty(Environment.ConnectionString, @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=BankingDB2;Integrated Security=True")
                           .SetProperty(Environment.ConnectionDriver, typeof(SqlClientDriver).AssemblyQualifiedName)
                           .SetProperty(Environment.Dialect, typeof(MsSql2012Dialect).AssemblyQualifiedName)
-                          .SetProperty(Environment.ShowSql, "true");
+                          .SetProperty(Environment.ShowSql, "true")
+                          .SetProperty(Environment.Hbm2ddlAuto, "update");
                          // .SetProperty(Environment.FormatSql, "true");
                     var modelMapper = new ModelMapper();
                     modelMapper.AddMapping<CompteMap>();
